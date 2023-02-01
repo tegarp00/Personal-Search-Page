@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="./images/btnsearch.png" type="image/gif" sizes="16x16">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Personal Page</title>
+  <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+  <script src="./dist/app.js" defer></script>
+  <script src="./js.js"></script>
+	  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          container: {
+            center: true,
+            screen: {
+              'lg': '1024px'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body style="font-family: 'M PLUS Code Latin', sans-serif;" class="bg-[#1A1B26]">
+
+<section>
+	<div class="container">
+		<div>
+			<div class="nav pt-[30px] flex justify-end">
+				<div class="flex items-center">
+					<a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1" class="text-[white]">Login</a>
+					<img src="./images/Profile.svg" alt="">
+				</div>
+			</div>
+		</div>
+
+    <div class="w-[80%] items-center mx-auto flex flex-col justify-center mt-[48px]">
+      <img src="images/ss.png" alt="">
+
+    <div x-data="search" class="flex items-center">
+  
+      <div>
+        <input @keyup.enter="submitSearch" x-model="q" class="w-[702px] px-[18px] h-[40px] text-[white] rounded-[30px] drop-shadow-[0px_4px_8px_rgba(145,145,145,0.25)] bg-[#101010] mt-[52px]" type="text" name="search" value="" placeholder="Apa carik?">
+      </div>
+      <div class="absolute right-[340px] top-[309px]"> 
+        <button @click="submitSearch" href="https://google.com"><img class="h-[34px]" src="images/btnsearch.png" alt=""></button>
+      </div>
+
+    </div>
+
+    </div>
+
+    <div>
+    </div>
+
+	</div>
+</section>
+
+
+</body>
+</html>
